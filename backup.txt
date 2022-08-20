@@ -1,0 +1,177 @@
+
+      <div class="container-lg mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex justify-content-center align-items-center">
+            <i
+              class="bi bi-exclamation-circle-fill me-2 fs-5"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              title="Rating about the environment"
+            ></i>
+            <h3 class="m-0 me-2">Environment</h3>
+            <span class="text-muted me-1">{{$environment}}</span
+            ><i class="bi bi-star-fill star-icon text-warning"></i>
+          </div>
+          <a
+            class="text-decoration-none fw-medium text-muted"
+            href="./environment"
+            >View all</a
+          >
+        </div>
+        <div class="d-flex gap-2 card-container">
+          @for ($x=0; $x<=2; $x++)
+          <p style="display: none;">{{$a= rand(0, sizeof($envicard)-1)}}</p>
+        <div class="border border-3 rounded-4 text-center p-3 pt-2 my-card">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person-fill avatar-icon fs-1"></i>
+                  <div class="ms-2 fw-medium">
+                    <div class="text-start star-container">
+                      @for ($i=1; $i<=$envicard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-warning"></i>
+                      @endfor
+                      @for ($i=1; $i<=5-$envicard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-secondary"></i>
+                      @endfor
+                    </div>
+                    {{$envicard[$a]->responden}}
+                  </div>
+                </div>
+                <p class="text-secondary">
+                {{$envicard[$a]->timecreated}}
+                </p>
+              </div>
+              <div class="card-comment">
+                <p class="text-start">
+                  {{$envicard[$a]->comments}}
+                </p>
+              </div>
+            </div>
+          </div>
+        @endfor
+
+
+          
+          
+      </div>
+      
+      </div>
+
+
+
+
+
+
+
+      <div class="container-lg mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex justify-content-center align-items-center">
+            <i
+              class="bi bi-exclamation-circle-fill me-2 fs-5"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              title="Rating about how they serve you"
+            ></i>
+            <h3 class="m-0 me-2">Service</h3>
+            <span class="text-muted me-1">{{$service}}</span
+            ><i class="bi bi-star-fill star-icon text-warning"></i>
+          </div>
+          <a
+            class="text-decoration-none fw-medium text-muted"
+            href="./service"
+            >View all</a
+          >
+        </div>
+        <div class="d-flex gap-2 card-container">
+        @for ($x=0; $x<=2; $x++)
+        <p style="display: none;">{{$a= rand(0, sizeof($servcard)-1)}}</p>
+          <div class="border border-3 rounded-4 text-center p-3 pt-2 my-card">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person-fill avatar-icon fs-1"></i>
+                  <div class="ms-2 fw-medium">
+                    <div class="text-start star-container">
+                      @for ($i=1; $i<=$servcard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-warning"></i>
+                      @endfor
+                      @for ($i=1; $i<=5-$servcard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-secondary"></i>
+                      @endfor
+                    </div>
+                    {{$servcard[$a]->responden}}
+                  </div>
+                </div>
+                <p class="text-secondary">{{$servcard[$a]->timecreated}}</p>
+              </div>
+              <div class="card-comment">
+                <p class="text-start">
+                {{$servcard[$a]->comments}}
+                </p>
+              </div>
+            </div>
+          </div>
+         @endfor
+         
+         
+
+      </div></div>
+
+
+
+
+      <div class="container-lg mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex justify-content-center align-items-center">
+            <i
+              class="bi bi-exclamation-circle-fill me-2 fs-5"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              title="Rating how the food taste"
+            ></i>
+            <h3 class="m-0 me-2">Food</h3>
+            <span class="text-muted me-1">{{$food}}</span
+            ><i class="bi bi-star-fill star-icon text-warning"></i>
+          </div>
+          <a
+            class="text-decoration-none fw-medium text-muted"
+            href="./food"
+            >View all</a
+          >
+        </div>
+        <div class="d-flex gap-2 card-container">
+
+        @for ($x=0; $x<=2; $x++)
+        <p style="display: none;">{{$a= rand(0, sizeof($envicard)-1)}}</p>
+          <div class="border border-3 rounded-4 text-center p-3 pt-2 my-card">
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person-fill avatar-icon fs-1"></i>
+                  <div class="ms-2 fw-medium">
+                    <div class="text-start star-container">
+                      @for ($i=1; $i<=$foodcard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-warning"></i>
+                      @endfor
+                      @for ($i=1; $i<=5-$foodcard[$a]->rating; $i++)
+                      <i class="bi bi-star-fill star-icon text-secondary"></i>
+                      @endfor
+                    </div>
+                    {{$foodcard[$a]->responden}}
+                  </div>
+                </div>
+                <p class="text-secondary">{{$foodcard[$a]->timecreated}}</p>
+              </div>
+              <div class="card-comment">
+                <p class="text-start">
+                {{$foodcard[$a]->comments}}
+                </p>
+              </div>
+            </div>
+          </div>
+        @endfor
+
