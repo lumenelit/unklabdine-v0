@@ -5,6 +5,7 @@ use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RateController;
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,9 +35,6 @@ Route::get('/admin', function () {
     return view('welcome');
 });
 
-Route::get('/schedule', function () {
-    return 'Schedule Page';
-});
 
 Route::get('/about', function () {
     return 'About Page';
@@ -49,6 +47,7 @@ Route::post('/rate/done', [RateController::class, 'store']);
 Route::get('/rating', [RatingController::class, 'main']);
 Route::get('/{type}', [ViewController::class, 'main']);
 Route::get('/menu', [MenuController::class, 'main']);
+Route::get('/schedule', [ScheduleController::class, 'main']);
 
 
 // Route::get('/rate', function () {

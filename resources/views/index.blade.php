@@ -53,6 +53,9 @@
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="./schedule">Schedule</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="./rate">Rate</a>
               </li>
               <li class="nav-item">
