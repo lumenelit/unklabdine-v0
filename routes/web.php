@@ -42,12 +42,12 @@ Route::get('/about', function () {
 
 
 Route::get('/', [HomeController::class, 'main']);
+Route::get('/schedule', [ScheduleController::class, 'main']);
 Route::get('/rate', [RateController::class, 'main']);
 Route::post('/rate/done', [RateController::class, 'store']);
 Route::get('/rating', [RatingController::class, 'main']);
 Route::get('/{type}', [ViewController::class, 'main']);
 Route::get('/menu', [MenuController::class, 'main']);
-Route::get('/schedule', [ScheduleController::class, 'main']);
 
 
 // Route::get('/rate', function () {

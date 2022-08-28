@@ -103,8 +103,9 @@
 
     <div class="container-lg mt-3">
     <h1 align="center" class="fw-semibold text-primary me-3">Cafetaria Schedule</h1>
-    <h6 align="center" class="fw-semibold text-primary me-3">{{$test}}</h6>
-
+    <h6 align="center" class="fw-semibold text-primary me-3">{{$period}}</h6>
+    <br><br>
+    <h3 align=center>Under Development</h3>
     </div>
     </main>
 
